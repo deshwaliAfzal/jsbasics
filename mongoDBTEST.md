@@ -12,8 +12,8 @@ db.createCollection("batch");
 
 ### insert data in colloction
 ```
-db.batches.insertMany([
-  {batchName : "Node.js", student : ["arif", "sher mohammad", "khalil"],
+db.batch.insertMany([
+  {batchName : "Node.js", students : ["aafzal", "asfaq", "majeet"],
    duration : 5, fees: 5000, marks : [10,20,30,40,50]},
 
   {batchName : "Design", student : ["arif", "khalil", "irfan", "adil"],
