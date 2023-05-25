@@ -16,16 +16,16 @@ db.batch.insertMany([
   {batchName : "Node.js", students : ["aafzal", "asfaq", "majeet"],
    duration : 5, fees: 5000, marks : [10,20,30,40,50]},
 
-  {batchName : "Design", student : ["arif", "khalil", "irfan", "adil"],
+  {batchName : "Design", students : ["arif", "khalil", "irfan", "adil"],
    duration : 5, fees: 12000, marks : [10,20,30]}, 
 
-  {batchName : "Java", student : ["arif", "khalil", "irfan"],
+  {batchName : "Java", students : ["arif", "khalil", "irfan"],
    duration : 5, fees: 13000, marks : [10,80,60]}, 
 
-  {batchName : "javaScript", student : ["arif", "khalil","adil"],
+  {batchName : "javaScript", students : ["arif", "khalil","adil"],
    duration : 5, fees: 5000, marks : [71,26,99,67]}, 
 
-  {batchName : "ComputerScience", student : ["khalil", "irfan", "adil"],
+  {batchName : "ComputerScience", students : ["khalil", "irfan", "adil"],
    duration : 5, fees: 1000, marks : [60,60,60]}])
 
 ```
