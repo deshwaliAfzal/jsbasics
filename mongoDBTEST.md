@@ -84,3 +84,66 @@ db.batch.updateMany({}, {$pull : {student : {$in : ["irfan", "adil"]}}});
  ```
  
  # TEST-2
+ 
+ ### creating schema
+```
+db.createCollection("students",{
+    validator:{
+        $jsonSchema:{
+            bsonType: "object",
+            required: ["studentName", "fathername" , "dob" , "email" , "mobile" , "batchname" ],
+            properties:{
+                studentName:{
+                    bsonType: 'string',
+                    description : "studentName should be string",
+                },
+                fathername:{
+                    bsonType: 'string',
+                    description : "Fathername should be string",
+                },
+                mothername:{
+                    bsonType: 'string',
+                    description : "Mothername should be string",
+                },
+                dob:{
+                    bsonType: 'string',
+                    description : "DOB should be date",
+                },
+                email:{
+                    bsonType: 'string',
+                    pattern: "^\\S+@\\S+\\.\\S+$",
+                    description : "Email should be valid email address",
+                },
+                mobile:{
+                    bsonType: 'string',
+                pattern: "^(\\+91|86)?[6789]\\d{9}$",
+                    description : "Mobile should be start with +91 or 86",
+                },
+                batchname:{
+                   enum:['nodejs' ,'designing' , 'javascript' , 'computerscience'],
+                    description : "Batchname should be string or enum",
+                },
+                fees:{
+                    bsonType: 'number',
+                    description : "fees should be string",
+                },
+            }
+        }
+    }
+})
+
+```
+
+
+### inserting document
+
+```
+db.students.insertOne({
+  "studentName" : "afzal khan",
+  "fathername" : "sikander khan",
+  "dob" : "2004-02-27",
+  "email" : "afzal.deshwali@gmail.com",
+  "mobile" : "8619426228",
+  "batchname" : "nodejs"
+})
+```
