@@ -54,7 +54,7 @@ db.Books.updateMany({},{ $set: { genre: "Fiction" }});
 
 ### Write a query to find documents in the "books" collection where the genre is "Fiction".
 
-``
+```
 db.Books.find({genre : { $eq : "Fiction" }});
 
 ```
